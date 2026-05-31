@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Created by Bisharah Alsarraf & Rayyan Ammar </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="admin">
+  <!-- Header and navigation created by Bisharah Alsarraf & Rayyan Ammar -->
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/download.png" alt="Abu Dhabi University logo"><span>Smart Advising</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="study-plan.html">Study Plan</a>
+      <a href="course-details.html">Courses</a>
+      <a class="active" href="admin.html">Admin</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- Admin page title -->
+    <section class="page-title">
+      <p class="eyebrow">Admin tools</p>
+      <h1>Manage the course database</h1>
+      <p>Use this page to add, edit, and delete course records. Changes are saved in the browser database and appear in the course catalog and study plan form.</p>
+    </section>
+
+    <!-- Admin form and table for managing the course database -->
+    <section class="section planner-layout">
+      <form id="adminCourseForm" class="form-panel" novalidate>
+        <h2 id="adminFormTitle">New Course</h2>
+        <input id="adminOriginalCode" type="hidden">
+
+        <label for="adminCode">Course Code</label>
+        <input id="adminCode" type="text" placeholder="Example: CSC 410" required>
+
+        <label for="adminTitle">Course Title</label>
+        <input id="adminTitle" type="text" placeholder="Example: Artificial Intelligence" required>
+
+        <label for="adminCredits">Credits</label>
+        <input id="adminCredits" type="number" min="1" max="6" value="3" required>
+
+        <label for="adminLevel">Level</label>
+        <select id="adminLevel" required>
+          <option value="">Choose level</option>
+          <option value="100">100 level</option>
+          <option value="200">200 level</option>
+          <option value="300">300 level</option>
+          <option value="400">400 level</option>
+        </select>
+
+        <label for="adminPrerequisites">Prerequisites</label>
+        <input id="adminPrerequisites" type="text" placeholder="Example: CSC 201, MTH 102">
+
+        <label for="adminDescription">Description</label>
+        <textarea id="adminDescription" rows="5" placeholder="Write a short course description" required></textarea>
+
+        <button id="adminSubmitButton" class="button primary full" type="submit">Add Course</button>
+        <button id="cancelAdminEdit" class="button secondary full hidden" type="button">Cancel Edit</button>
+        <p id="adminMessage" class="form-message" role="status"></p>
+      </form>
+
+      <div class="table-panel">
+        <div class="panel-heading">
+          <h2>All Courses</h2>
+          <button id="restoreDefaultCourses" class="button secondary" type="button">Restore Defaults</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Title</th>
+                <th>Credits</th>
+                <th>Level</th>
+                <th>Prerequisites</th>
+                <th>Type</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="adminCourseList"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 ADU Smart Academic Advising System. Created by Bisharah Alsarraf & Rayyan Ammar.</p>
+  </footer>
+</body>
+</html>

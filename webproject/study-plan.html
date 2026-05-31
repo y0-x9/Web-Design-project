@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Plan | Created by Bisharah Alsarraf & Rayyan Ammar </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="study-plan">
+  <!-- Header and navigation created by Bisharah Alsarraf & Rayyan Ammar -->
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/download.png" alt="Abu Dhabi University logo"><span>Smart Advising</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="study-plan.html">Study Plan</a>
+      <a href="course-details.html">Courses</a>
+      <a href="admin.html">Admin</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- Page title for the student course tracker -->
+    <section class="page-title">
+      <p class="eyebrow">Interactive dashboard</p>
+      <h1>Upload and track your classes</h1>
+      <p>Add your completed, current, and planned courses. The system will calculate progress and suggest suitable next courses.</p>
+    </section>
+
+    <!-- Student progress summary cards -->
+    <section class="stats-grid" aria-label="Academic progress summary">
+      <div class="stat">
+        <span id="totalCredits">0</span>
+        <p>Completed credits</p>
+      </div>
+      <div class="stat">
+        <span id="gpaValue">0.00</span>
+        <p>Estimated GPA</p>
+      </div>
+      <div class="stat">
+        <span id="courseCount">0</span>
+        <p>Tracked courses</p>
+      </div>
+    </section>
+
+    <!-- Form and table for uploading student classes -->
+    <section class="section planner-layout">
+      <form id="courseForm" class="form-panel" novalidate>
+        <h2>Add a Course</h2>
+        <label for="courseCode">Course Code</label>
+        <select id="courseCode" required>
+          <option value="">Choose a course</option>
+        </select>
+
+        <label for="courseStatus">Status</label>
+        <select id="courseStatus" required>
+          <option value="completed">Completed</option>
+          <option value="current">Current</option>
+          <option value="planned">Planned</option>
+        </select>
+
+        <label for="courseGrade">Grade</label>
+        <select id="courseGrade">
+          <option value="">Not graded yet</option>
+          <option value="4">A</option>
+          <option value="3.5">B+</option>
+          <option value="3">B</option>
+          <option value="2.5">C+</option>
+          <option value="2">C</option>
+          <option value="1.5">D+</option>
+          <option value="1">D</option>
+          <option value="0">F</option>
+        </select>
+
+        <button class="button primary full" type="submit">Add Course</button>
+        <p id="courseMessage" class="form-message" role="status"></p>
+      </form>
+
+      <div class="table-panel">
+        <div class="panel-heading">
+          <h2>My Courses</h2>
+          <button id="clearCourses" class="button danger" type="button">Clear</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Title</th>
+                <th>Credits</th>
+                <th>Status</th>
+                <th>Grade</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="studentCourses"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript creates course recommendations here -->
+    <section class="section">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Smart suggestions</p>
+          <h2>Recommended next courses</h2>
+        </div>
+        <a class="button secondary" href="course-details.html">Check Prerequisites</a>
+      </div>
+      <div id="recommendations" class="recommendation-grid"></div>
+    </section>
+
+    <!-- Simple sample study plan table for the project requirement -->
+    <section class="section">
+      <h2>Sample Study Plan Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Semester</th>
+              <th>Recommended Courses</th>
+              <th>Total Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>ENG 100, MTH 101, CSC 101, GEN 101</td><td>12</td></tr>
+            <tr><td>2</td><td>ENG 200, MTH 102, CSC 102, CIS 110</td><td>12</td></tr>
+            <tr><td>3</td><td>CSC 201, CSC 202, STA 201, GEN 201</td><td>12</td></tr>
+            <tr><td>4</td><td>CSC 307, CSC 320, CSC 330, Elective</td><td>12</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 ADU Smart Academic Advising System. Created by Bisharah Alsarraf & Rayyan Ammar.</p>
+  </footer>
+</body>
+</html>

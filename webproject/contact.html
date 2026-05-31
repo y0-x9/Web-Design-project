@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Created by Bisharah Alsarraf & Rayyan Ammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+  <!-- Header and navigation -->
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/download.png" alt="Abu Dhabi University logo"><span>Smart Advising</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="study-plan.html">Study Plan</a>
+      <a href="course-details.html">Courses</a>
+      <a href="admin.html">Admin</a>
+      <a href="tips.html">Tips</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- Contact page title -->
+    <section class="page-title">
+      <p class="eyebrow">Feedback form</p>
+      <h1>Contact and advising request</h1>
+      <p>Send a message, report a course planning issue, or request academic advising support.</p>
+    </section>
+
+    <!-- Feedback form with validation -->
+    <section class="section contact-layout">
+      <form id="contactForm" class="form-panel wide" novalidate>
+        <label for="studentName">Full Name</label>
+        <input id="studentName" type="text" placeholder="Enter your name" required>
+
+        <label for="studentEmail">Email</label>
+        <input id="studentEmail" type="email" placeholder="student@example.com" required>
+
+        <label for="studentMajor">Major</label>
+        <select id="studentMajor" required>
+          <option value="">Choose your major</option>
+          <option>Computer Science</option>
+          <option>Cybersecurity</option>
+          <option>Information Technology</option>
+          <option>Software Engineering</option>
+        </select>
+
+        <label for="messageType">Message Type</label>
+        <select id="messageType" required>
+          <option value="">Choose a type</option>
+          <option>Advising Question</option>
+          <option>Course Issue</option>
+          <option>Feedback</option>
+        </select>
+
+        <label for="studentMessage">Message</label>
+        <textarea id="studentMessage" rows="6" placeholder="Write your message" required></textarea>
+
+        <button class="button primary" type="submit">Submit Message</button>
+        <p id="contactMessage" class="form-message" role="status"></p>
+      </form>
+
+      <aside class="contact-card">
+        <h2>Office Information</h2>
+        <p><strong>Department:</strong> Academic Advising Office</p>
+        <p><strong>Response Time:</strong> 1-2 working days</p>
+        <p><strong>Best Use:</strong> Bring your current study plan and list of completed courses.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 ADU Smart Academic Advising System. Created by Bisharah Alsarraf & Rayyan Ammar.</p>
+  </footer>
+</body>
+</html>

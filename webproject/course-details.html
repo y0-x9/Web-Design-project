@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details | Created by Bisharah Alsarraf & Rayyan Ammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="courses">
+  <!-- Header and navigation created by Bisharah Alsarraf & Rayyan Ammar -->
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/download.png" alt="Abu Dhabi University logo"><span>Smart Advising</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="study-plan.html">Study Plan</a>
+      <a class="active" href="course-details.html">Courses</a>
+      <a href="admin.html">Admin</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- Course catalog page title -->
+    <section class="page-title">
+      <p class="eyebrow">Course catalog</p>
+      <h1>Course details and prerequisites</h1>
+      <p>Search the course list and check which classes should be completed before registration.</p>
+    </section>
+
+    <!-- Search and filter controls for courses -->
+    <section class="section">
+      <div class="filter-bar">
+        <label for="courseSearch">Search courses</label>
+        <input id="courseSearch" type="search" placeholder="Search by code or title">
+        <label for="levelFilter">Level</label>
+        <select id="levelFilter">
+          <option value="all">All levels</option>
+          <option value="100">100 level</option>
+          <option value="200">200 level</option>
+          <option value="300">300 level</option>
+          <option value="400">400 level</option>
+        </select>
+      </div>
+      <div id="courseCatalog" class="course-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 ADU Smart Academic Advising System. Created by Bisharah Alsarraf & Rayyan Ammar.</p>
+  </footer>
+</body>
+</html>
